@@ -1,0 +1,8 @@
+.env
+__pycache__/
+venv/
+vector_db/
+debug.log
+output.txt
+output_generated.py
+*.pyc
