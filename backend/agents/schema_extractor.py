@@ -1,7 +1,6 @@
 # agents/schema_extractor.py
 
 import json
-from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from llm_config import get_llm_response
 from pydantic import SecretStr
