@@ -336,7 +336,6 @@ from dataclasses import dataclass
 from typing import List
 #from llm_config import get_llm_response
 #from langchain_openai import ChatOpenAI
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from dotenv import load_dotenv
 import os
@@ -407,12 +406,9 @@ No explanation. No markdown backticks. Just code."""
         #     temperature=0.1,
         #     api_key=SecretStr(os.getenv("GROQ_API_KEY") or "")
         # )
-        self.llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash-lite",
-            google_api_key=os.getenv("GEMINI_API_KEY"),
-            temperature=0.1
-        )
-        
+        # Generation uses get_llm_response; no unused provider client is needed.
+        pass
+
     # ─────────────────────────────────────
     # MAIN ENTRY POINT
     # ─────────────────────────────────────
